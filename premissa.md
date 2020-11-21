@@ -1,0 +1,3 @@
+# Premissa do Jogo
+
+Com o desastre do distanciamento social da pandemia do Sars-CoV-2, a sociedade se viu obrigada a adotar bolhas sociais, totalmente isoladas entre si, em ginásios e galpões improvisados. Mas a economia força o contato entre elas, gerando tensão e caos. No meio disso tudo, o personagem principal quer fugir da sua ARCa, a 20202, em busca da lenda do 1F4, um setor da cidade sem a doença e suas mutações. Um paraíso na Terra? Mas para isso terá de coletar suprimentos, fazer aliados e negociar pertences para a sua fuga e sobreviver na jornada pela terra sem lei fora das ARCas. Porém, a ARCa não aceitará perder mais um "recurso"...
