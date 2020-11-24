@@ -1,9 +1,7 @@
-# jogo-web
-Jogo Web com Phaser 3
-
-Equipes:
+# Equipes
 
 - https://github.com/mirabolante
 - https://github.com/falarya-brawl
 - https://github.com/FBJ-TCD
 - https://github.com/FT-riddle
+- https://github.com/G-A-L-E-O-N-G-A-D
