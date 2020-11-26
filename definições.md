@@ -9,7 +9,7 @@ Para a construção dos personagens e roteiro, vou usar como base ["A Jornada do
 
 Para escrever, ouço músicas como ["The Pretender"](https://open.spotify.com/track/7x8dCjCr0x6x2lXKujYD34), de Foo Fighters.
 De referência de jogo, os clássicos como [Phantasy Star](https://pt.wikipedia.org/wiki/Phantasy_Star_(jogo_eletr%C3%B4nico)) e 
-[The Legend of Zelda: A Link to the Past](https://zelda.gamepedia.com/The_Legend_of_Zelda:_A_Link_to_the_Past).
+[The Legend of Zelda: A Link to the Past](https://zelda.gamepedia.com/The_Legend_of_Zelda:_A_Link_to_the_Past) - e outros inspirados neste, como [Stranger Things: The Game](https://play.google.com/store/apps/details?id=com.bonusxp.legend).
 
 # Sobre o mundo
 
