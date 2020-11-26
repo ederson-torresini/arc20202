@@ -17,6 +17,6 @@ O jogo se passa num futuro próximo, resultado da pandemia que se estendeu por a
 
 # Sobre os personagens
 
-O personagem principal é Matias. Com aproximadamente 20 anos, loiro e um pouco magro para a altura. Acorda todo dia e faz tudo igual: consertar robôs. É técnico de manutenção, e é assim que garante um soldo mínimo na semana para comida. É impulsivo, reclama demais, e ainda acredita que há algo lá fora da ARCa que ninguém conta.
+O personagem principal é Matias. Com aproximadamente 20 anos, loiro e um pouco magro para a altura. Acorda todo dia e faz tudo igual: consertar robôs. É técnico de manutenção, e é assim que garante um soldo mínimo na semana para comida. É impulsivo, reclama demais, e ainda acredita que há algo lá fora da ARCa que ninguém conta: o setor 10F04.
 
 ...
