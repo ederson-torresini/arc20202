@@ -7,9 +7,11 @@
 ](https://www.gitpod.io/blog/gitpodify/).
 - [Phaser Editor 2D](https://github.com/PhaserEditor2D/PhaserEditor): criador de cenas 2D para Phaser 3.
 - [Tiled Map Editor](https://www.mapeditor.org/): editor de *tilemaps*.
-- [Dungoen Scrawl](https://dungeonscrawl.com/): gerador de mapas e labirintos.
+- [Dungeon Scrawl](https://dungeonscrawl.com/): gerador de mapas e labirintos.
 - [Twine](https://twinery.org): editor *online* para escrita de textos não lineares, como jogos interativos.
 - [GB Studio](https://www.gbstudio.dev/): editor de jogos ao estilo Pokemon do GameBoy.
+- [Sonic Pi](https://sonic-pi.net/): sintetizador de música programável em código.
+- [ZzXFM](https://keithclark.co.uk/articles/zzfxm/): mini gerador de música para Javascript.
 
 # Sites com recursos
 
