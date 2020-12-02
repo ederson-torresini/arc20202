@@ -30,7 +30,7 @@
 
 | Equipe                                                    | Entrega 1 |
 | --------------------------------------------------------- | --------- |
-| [mirabolante](https://github.com/mirabolante)             | 8         |
+| [mirabolante](https://github.com/mirabolante)             | 10        |
 | [falarya-brawl](https://github.com/falarya-brawl)         | 8         |
 | [FBJ-TCD](https://github.com/FBJ-TCD)                     | 10        |
 | [FT-riddle](https://github.com/FT-riddle)                 | 8         |
