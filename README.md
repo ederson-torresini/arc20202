@@ -10,6 +10,7 @@
 - [Dungeon Scrawl](https://dungeonscrawl.com/): gerador de mapas e labirintos.
 - [Twine](https://twinery.org): editor _online_ para escrita de textos não lineares, como jogos interativos.
 - [GB Studio](https://www.gbstudio.dev/): editor de jogos ao estilo Pokemon do GameBoy.
+- [Anchor](https://anchor.fm): plataforma de gravação, edição e publicação em vários canais de podcast, com grande integração com o [Spotify](https://spotify.com).
 - [Sonic Pi](https://sonic-pi.net/): sintetizador de música programável em código.
 - [ZzXFM](https://keithclark.co.uk/articles/zzfxm/): mini gerador de música para Javascript.
 
