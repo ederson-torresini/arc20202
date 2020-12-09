@@ -31,16 +31,22 @@ function preload() {
 function create() {
   // Tilemap
   const map = this.make.tilemap({ key: "map" });
+
+  // Tilesets
   const tileset0 = map.addTilesetImage("terreno", "terreno");
   const tileset1 = map.addTilesetImage("ARCas", "ARCas");
+
+  // Terrain
   const terreno = map.createStaticLayer("terreno", tileset0, 0, 0);
-  const ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
 
   // Player
   player = this.physics.add.sprite(400, 304, "player");
 
+  // Buildings
+  const ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
+
   // Collision detection
-  ARCas.setCollisionByProperty({ "collides": true });
+  ARCas.setCollisionByProperty({ collides: true });
   player.setCollideWorldBounds(true);
   this.physics.add.collider(player, ARCas);
 
