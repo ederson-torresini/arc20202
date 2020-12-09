@@ -26,9 +26,13 @@ function preload() {
     frameWidth: 16,
     frameHeight: 16,
   });
+  this.load.audio("parede", "assets/parede.ogg");
 }
 
 function create() {
+  // Sounds
+  parede = this.sound.add("parede");
+
   // Tilemap
   const map = this.make.tilemap({ key: "map" });
 
@@ -48,7 +52,7 @@ function create() {
   // Collision detection
   ARCas.setCollisionByProperty({ collides: true });
   player.setCollideWorldBounds(true);
-  this.physics.add.collider(player, ARCas);
+  this.physics.add.collider(player, ARCas, hitARCa, null, this);
 
   this.anims.create({
     key: "left",
@@ -102,4 +106,8 @@ function update(time, delta) {
   } else {
     player.body.setVelocityY(0);
   }
+}
+
+function hitARCa(player, ARCas) {
+  parede.play();
 }

@@ -13,6 +13,7 @@
 - [Anchor](https://anchor.fm): plataforma de gravação, edição e publicação em vários canais de podcast, com grande integração com o [Spotify](https://spotify.com).
 - [Sonic Pi](https://sonic-pi.net/): sintetizador de música programável em código.
 - [ZzXFM](https://keithclark.co.uk/articles/zzfxm/): mini gerador de música para Javascript.
+- [Buildbox](https://www.buildbox.com/13-places-to-find-free-game-sound-effects/): coletânea de sites com efeitos sonoros grátis.
 
 # Sites com recursos
 
