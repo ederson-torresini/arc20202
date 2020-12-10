@@ -16,7 +16,7 @@ cena1.preload = function () {
     frameWidth: 16,
     frameHeight: 16,
   });
-  this.load.audio("parede", "assets/parede.ogg");
+  this.load.audio("parede", "assets/parede.mp3");
 };
 
 cena1.create = function() {
