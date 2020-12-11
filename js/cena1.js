@@ -1,4 +1,10 @@
+// Importar a próxima cena
+import { cena2 } from "./cena2.js";
+
+// Criar a cena 1
 var cena1 = new Phaser.Scene("Cena 1");
+
+// Variáveis locais
 var map;
 var tileset0;
 var terreno;
@@ -7,11 +13,14 @@ var ARCas;
 var player;
 var parede;
 var cursors;
+var timedEvent;
+var timer = 10;
+var timerText;
 
 cena1.preload = function () {
   this.load.image("terreno", "assets/terreno.png");
   this.load.image("ARCas", "assets/ARCas.png");
-  this.load.tilemapTiledJSON("map", "assets/cena-1.json");
+  this.load.tilemapTiledJSON("map", "assets/cena1.json");
   this.load.spritesheet("player", "assets/player.png", {
     frameWidth: 16,
     frameHeight: 16,
@@ -19,8 +28,8 @@ cena1.preload = function () {
   this.load.audio("parede", "assets/parede.mp3");
 };
 
-cena1.create = function() {
-  // Sounds
+cena1.create = function () {
+  // Efeitos sonoros
   parede = this.sound.add("parede");
 
   // Tilemap
@@ -30,16 +39,16 @@ cena1.create = function() {
   tileset0 = map.addTilesetImage("terreno", "terreno");
   tileset1 = map.addTilesetImage("ARCas", "ARCas");
 
-  // Terrain
+  // Terreno
   terreno = map.createStaticLayer("terreno", tileset0, 0, 0);
 
-  // Player
+  // Personagem
   player = this.physics.add.sprite(400, 304, "player");
 
-  // Buildings
+  // Prédios (ARCas)
   ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
 
-  // Collision detection
+  // Detecção de colisão
   ARCas.setCollisionByProperty({ collides: true });
   player.setCollideWorldBounds(true);
   this.physics.add.collider(player, ARCas, hitARCa, null, this);
@@ -74,10 +83,25 @@ cena1.create = function() {
     repeat: -1,
   });
 
+  // Direcionais do teclado
   cursors = this.input.keyboard.createCursorKeys();
-}
 
-cena1.update = function(time, delta) {
+  // Contagem regressiva em segundos (1.000 milissegundos)
+  timedEvent = this.time.addEvent({
+    delay: 1000,
+    callback: countdown,
+    callbackScope: this,
+    loop: true,
+  });
+
+  // Mostra na tela o contador
+  timerText = this.add.text(16, 16, "10", {
+    fontSize: "32px",
+    fill: "#000",
+  });
+};
+
+cena1.update = function (time, delta) {
   if (cursors.left.isDown) {
     player.body.setVelocityX(-100);
     player.anims.play("left", true);
@@ -96,10 +120,24 @@ cena1.update = function(time, delta) {
   } else {
     player.body.setVelocityY(0);
   }
-}
+};
 
 function hitARCa(player, ARCas) {
+  // Ao colidir com a parede, toca o efeito sonoro
   parede.play();
 }
 
+function countdown() {
+  // Reduz o contador em 1 segundo
+  timer -= 1;
+  timerText.setText(timer);
+
+  // Se o contador chegar a zero, inicia a cena 2
+  if (timer === 0) {
+    this.scene.start(cena2);
+    timer = 10;
+  }
+}
+
+// Exportar a cena
 export { cena1 };
