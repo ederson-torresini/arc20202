@@ -104,10 +104,18 @@ cena1.create = function () {
   });
 
   // Mostra na tela o contador
-  timerText = this.add.text(16, 16, "10", {
+  timerText = this.add.text(16, 16, timer, {
     fontSize: "32px",
     fill: "#000",
   });
+  timerText.setScrollFactor(0);
+
+  // Cena (960x960) maior que a tela (800x600)
+  this.cameras.main.setBounds(0, 0, 960, 960);
+  this.physics.world.setBounds(0, 0, 960, 960);
+
+  // Câmera seguindo o personagem
+  this.cameras.main.startFollow(player);
 };
 
 cena1.update = function (time, delta) {
