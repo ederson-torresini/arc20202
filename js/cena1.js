@@ -12,6 +12,7 @@ var tileset1;
 var ARCas;
 var player;
 var parede;
+var voz;
 var cursors;
 var timedEvent;
 var timer;
@@ -28,6 +29,7 @@ cena1.preload = function () {
   });
   this.load.audio("trilha", "assets/cena1.mp3");
   this.load.audio("parede", "assets/parede.mp3");
+  this.load.audio("voz", "assets/voz.mp3");
 };
 
 cena1.create = function () {
@@ -40,6 +42,7 @@ cena1.create = function () {
 
   // Efeitos sonoros
   parede = this.sound.add("parede");
+  voz = this.sound.add("voz");
 
   // Tilemap
   map = this.make.tilemap({ key: "map" });
@@ -57,11 +60,18 @@ cena1.create = function () {
   // Prédios (ARCas)
   ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
 
-  // Detecção de colisão
-  ARCas.setCollisionByProperty({ collides: true });
+  // Personagem colide com os limites da cena
   player.setCollideWorldBounds(true);
+
+  // Detecção de colisão: terreno
+  terreno.setCollisionByProperty({ collides: true });
+  this.physics.add.collider(player, terreno, hitCave, null, this);
+
+  // Detecção de colisão e disparo de evento: ARCas
+  ARCas.setCollisionByProperty({ collides: true });
   this.physics.add.collider(player, ARCas, hitARCa, null, this);
 
+  // Animação: a esquerda
   this.anims.create({
     key: "left",
     frames: this.anims.generateFrameNumbers("player", {
@@ -72,6 +82,7 @@ cena1.create = function () {
     repeat: -1,
   });
 
+  // Animação: a direita
   this.anims.create({
     key: "right",
     frames: this.anims.generateFrameNumbers("player", {
@@ -82,6 +93,7 @@ cena1.create = function () {
     repeat: -1,
   });
 
+  // Animação: ficar parado (e virado para a direita)
   this.anims.create({
     key: "stopped",
     frames: this.anims.generateFrameNumbers("player", {
@@ -139,6 +151,11 @@ cena1.update = function (time, delta) {
   }
 };
 
+function hitCave(player, terreno) {
+  // Ao passar pela frente da caverna, toca o efeito sonoro
+  voz.play();
+}
+
 function hitARCa(player, ARCas) {
   // Ao colidir com a parede, toca o efeito sonoro
   parede.play();
@@ -153,7 +170,6 @@ function countdown() {
   if (timer === 0) {
     trilha.stop();
     this.scene.start(cena2);
-    timer = 10;
   }
 }
 
