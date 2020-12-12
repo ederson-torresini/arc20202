@@ -14,8 +14,9 @@ var player;
 var parede;
 var cursors;
 var timedEvent;
-var timer = 10;
+var timer;
 var timerText;
+var trilha;
 
 cena1.preload = function () {
   this.load.image("terreno", "assets/terreno.png");
@@ -25,10 +26,18 @@ cena1.preload = function () {
     frameWidth: 16,
     frameHeight: 16,
   });
+  this.load.audio("trilha", "assets/cena1.mp3");
   this.load.audio("parede", "assets/parede.mp3");
 };
 
 cena1.create = function () {
+  // Iniciando contagem regressiva...
+  timer = 60;
+
+  // Trilha sonora
+  trilha = this.sound.add("trilha");
+  trilha.play();
+
   // Efeitos sonoros
   parede = this.sound.add("parede");
 
@@ -134,6 +143,7 @@ function countdown() {
 
   // Se o contador chegar a zero, inicia a cena 2
   if (timer === 0) {
+    trilha.stop();
     this.scene.start(cena2);
     timer = 10;
   }
