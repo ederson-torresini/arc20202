@@ -30,14 +30,14 @@
 
 # Equipes
 
-| Equipe                                                    | Entrega 1 |
-| --------------------------------------------------------- | --------- |
-| [mirabolante](https://github.com/mirabolante)             | 10        |
-| [falarya-brawl](https://github.com/falarya-brawl)         | 8         |
-| [FBJ-TCD](https://github.com/FBJ-TCD)                     | 10        |
-| [FT-riddle](https://github.com/FT-riddle)                 | 8         |
-| [G-A-L-E-O-N-G-A-D](https://github.com/G-A-L-E-O-N-G-A-D) | 10        |
-| [mba-studios](https://github.com/mba-studios)             | 10        |
-| [MK-VVSM](https://github.com/MK-VVSM)                     | 6         |
-| [Erklan](https://github.com/Erklan)                       | 6         |
-| [TiO-Games](https://github.com/TiO-Games)                 | 3         |
+| Equipe                                                    | Projeto | Entrega 1 |
+| --------------------------------------------------------- | - | --------- |
+| [mirabolante](https://github.com/mirabolante)             | [kanban](https://github.com/mirabolante/jogo-web/projects/1) | 10        |
+| [falarya-brawl](https://github.com/falarya-brawl)         | [Falarya-game-project](https://github.com/falarya-brawl/falarya-game/projects/1) | 8         |
+| [FBJ-TCD](https://github.com/FBJ-TCD)                     | [O LABIRINTO DAS ESCOLHAS](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS/projects/1) | 10        |
+| [FT-riddle](https://github.com/FT-riddle)                 | [kanban](https://github.com/FT-riddle/jogo-web/projects/1) | 8         |
+| [G-A-L-E-O-N-G-A-D](https://github.com/G-A-L-E-O-N-G-A-D) | [Project X](https://github.com/G-A-L-E-O-N-G-A-D/PROJECT-X/projects/1) | 10        |
+| [mba-studios](https://github.com/mba-studios)             | [Jogo](https://github.com/mba-studios/mba-studios/projects/2) | 10        |
+| [MK-VVSM](https://github.com/MK-VVSM)                     | [kanban](https://github.com/MK-VVSM/jogo/projects/1) | 6         |
+| [Erklan](https://github.com/Erklan)                       | [kanban](https://github.com/Erklan/jogo-web/projects/1) | 6         |
+| [TiO-Games](https://github.com/TiO-Games)                 | [Kanban do Jogo Web](https://github.com/TiO-Games/jogo_web/projects/1) | 3         |
