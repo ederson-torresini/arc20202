@@ -37,7 +37,7 @@
 | [FBJ-TCD](https://github.com/FBJ-TCD)                     | [O LABIRINTO DAS ESCOLHAS](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS/projects/1) | 10        | 2         |
 | [FT-riddle](https://github.com/FT-riddle)                 | [kanban](https://github.com/FT-riddle/jogo-web/projects/1)                                 | 8         | 0         |
 | [G-A-L-E-O-N-G-A-D](https://github.com/G-A-L-E-O-N-G-A-D) | [Project X](https://github.com/G-A-L-E-O-N-G-A-D/PROJECT-X/projects/1)                     | 10        | 3         |
-| [mba-studios](https://github.com/mba-studios)             | [Jogo](https://github.com/mba-studios/mba-studios/projects/2)                              | 10        | 9         |
+| [mba-studios](https://github.com/mba-studios)             | [Jogo](https://github.com/mba-studios/mba-studios/projects/2)                              | 10        | 10        |
 | [MK-VVSM](https://github.com/MK-VVSM)                     | [kanban](https://github.com/MK-VVSM/jogo/projects/1)                                       | 6         | 0         |
 | [Erklan](https://github.com/Erklan)                       | [kanban](https://github.com/Erklan/jogo-web/projects/1)                                    | 6         | 5         |
 | [TiO-Games](https://github.com/TiO-Games)                 | [Kanban do Jogo Web](https://github.com/TiO-Games/jogo_web/projects/1)                     | 3         | 0         |
