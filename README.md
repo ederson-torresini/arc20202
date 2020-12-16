@@ -34,7 +34,7 @@
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------- | --------- |
 | [mirabolante](https://github.com/mirabolante)             | [kanban](https://github.com/mirabolante/jogo-web/projects/1)                               | 10        | 10        |
 | [falarya-brawl](https://github.com/falarya-brawl)         | [Falarya-game-project](https://github.com/falarya-brawl/falarya-game/projects/1)           | 8         | 0         |
-| [FBJ-TCD](https://github.com/FBJ-TCD)                     | [O LABIRINTO DAS ESCOLHAS](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS/projects/1) | 10        | 2         |
+| [FBJ-TCD](https://github.com/FBJ-TCD)                     | [O LABIRINTO DAS ESCOLHAS](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS/projects/1) | 10        | 10        |
 | [FT-riddle](https://github.com/FT-riddle)                 | [kanban](https://github.com/FT-riddle/jogo-web/projects/1)                                 | 8         | 0         |
 | [G-A-L-E-O-N-G-A-D](https://github.com/G-A-L-E-O-N-G-A-D) | [Project X](https://github.com/G-A-L-E-O-N-G-A-D/PROJECT-X/projects/1)                     | 10        | 3         |
 | [mba-studios](https://github.com/mba-studios)             | [Jogo](https://github.com/mba-studios/mba-studios/projects/2)                              | 10        | 10        |
