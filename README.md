@@ -1,5 +1,9 @@
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/boiada-da-cara-preta/jogo-web)
 
+# ARCa 20202
+
+A [premissa](https://github.com/boiada-da-cara-preta/jogo-web/blob/main/premissa.md) e as [definições](https://github.com/boiada-da-cara-preta/jogo-web/blob/main/definições.md) do jogo dão uma ideia do jogo, mas o bom mesmo é jogar: [https://boiada-da-cara-preta.github.io/jogo-web](https://boiada-da-cara-preta.github.io/jogo-web).
+
 # Ferramentas para o desenvolvimento do projeto da disciplina
 
 - [Phaser 3](https://phaser.io): _framework_ para desenvolvimento de jogos Web usando Javascript ou Typescript. Tem [boa documentação, de exemplos a tutoriais na página oficial](https://phaser.io/learn).
