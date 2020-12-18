@@ -25,8 +25,11 @@ var timerText;
 var trilha;
 
 cena1.preload = function () {
+  // Tilesets
   this.load.image("terreno", "assets/terreno.png");
   this.load.image("ARCas", "assets/ARCas.png");
+
+  // Tilemap
   this.load.tilemapTiledJSON("map", "assets/cena1.json");
 
   // Jogador 1
@@ -40,7 +43,11 @@ cena1.preload = function () {
     frameWidth: 16,
     frameHeight: 16,
   });
+
+  // Trilha sonora
   this.load.audio("trilha", "assets/cena1.mp3");
+
+  // Efeitos sonoros
   this.load.audio("parede", "assets/parede.mp3");
   this.load.audio("voz", "assets/voz.mp3");
 };
@@ -64,14 +71,14 @@ cena1.create = function () {
   tileset0 = map.addTilesetImage("terreno", "terreno");
   tileset1 = map.addTilesetImage("ARCas", "ARCas");
 
-  // Terreno
+  // Camada 1: terreno
   terreno = map.createStaticLayer("terreno", tileset0, 0, 0);
 
   // Personagens
   player1 = this.physics.add.sprite(400, 300, "player1");
   player2 = this.physics.add.sprite(300, 400, "player2");
 
-  // Prédios (ARCas)
+  // Camada 2: ARCas
   ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
 
   // Personagens colidem com os limites da cena
