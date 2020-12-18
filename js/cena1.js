@@ -12,6 +12,10 @@ var tileset1;
 var ARCas;
 var player1;
 var player2;
+var up;
+var down;
+var left;
+var right;
 var parede;
 var voz;
 var cursors;
@@ -70,21 +74,24 @@ cena1.create = function () {
   // Prédios (ARCas)
   ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
 
-  // Personagem colide com os limites da cena
-  player.setCollideWorldBounds(true);
+  // Personagens colidem com os limites da cena
+  player1.setCollideWorldBounds(true);
+  player2.setCollideWorldBounds(true);
 
   // Detecção de colisão: terreno
   terreno.setCollisionByProperty({ collides: true });
-  this.physics.add.collider(player, terreno, hitCave, null, this);
+  this.physics.add.collider(player1, terreno, hitCave, null, this);
+  this.physics.add.collider(player2, terreno, hitCave, null, this);
 
   // Detecção de colisão e disparo de evento: ARCas
   ARCas.setCollisionByProperty({ collides: true });
-  this.physics.add.collider(player, ARCas, hitARCa, null, this);
+  this.physics.add.collider(player1, ARCas, hitARCa, null, this);
+  this.physics.add.collider(player2, ARCas, hitARCa, null, this);
 
-  // Animação: a esquerda
+  // Animação do jogador 1: a esquerda
   this.anims.create({
-    key: "left",
-    frames: this.anims.generateFrameNumbers("player", {
+    key: "left1",
+    frames: this.anims.generateFrameNumbers("player1", {
       start: 0,
       end: 6,
     }),
@@ -92,10 +99,21 @@ cena1.create = function () {
     repeat: -1,
   });
 
-  // Animação: a direita
+  // Animação do jogador 2: a esquerda
   this.anims.create({
-    key: "right",
-    frames: this.anims.generateFrameNumbers("player", {
+    key: "left2",
+    frames: this.anims.generateFrameNumbers("player2", {
+      start: 0,
+      end: 6,
+    }),
+    frameRate: 10,
+    repeat: -1,
+  });
+
+  // Animação do jogador 1: a direita
+  this.anims.create({
+    key: "right1",
+    frames: this.anims.generateFrameNumbers("player1", {
       start: 15,
       end: 21,
     }),
@@ -103,10 +121,32 @@ cena1.create = function () {
     repeat: -1,
   });
 
-  // Animação: ficar parado (e virado para a direita)
+  // Animação do jogador 2: a direita
   this.anims.create({
-    key: "stopped",
-    frames: this.anims.generateFrameNumbers("player", {
+    key: "right2",
+    frames: this.anims.generateFrameNumbers("player2", {
+      start: 15,
+      end: 21,
+    }),
+    frameRate: 10,
+    repeat: -1,
+  });
+
+  // Animação do jogador 1: ficar parado (e virado para a direita)
+  this.anims.create({
+    key: "stopped1",
+    frames: this.anims.generateFrameNumbers("player1", {
+      start: 11,
+      end: 14,
+    }),
+    frameRate: 5,
+    repeat: -1,
+  });
+
+  // Animação do jogador 2: ficar parado (e virado para a direita)
+  this.anims.create({
+    key: "stopped2",
+    frames: this.anims.generateFrameNumbers("player2", {
       start: 11,
       end: 14,
     }),
@@ -116,6 +156,10 @@ cena1.create = function () {
 
   // Direcionais do teclado
   cursors = this.input.keyboard.createCursorKeys();
+  up = this.input.keyboard.addKey("W");
+  down = this.input.keyboard.addKey("S");
+  left = this.input.keyboard.addKey("A");
+  right = this.input.keyboard.addKey("D");
 
   // Contagem regressiva em segundos (1.000 milissegundos)
   timedEvent = this.time.addEvent({
@@ -136,28 +180,47 @@ cena1.create = function () {
   this.cameras.main.setBounds(0, 0, 960, 960);
   this.physics.world.setBounds(0, 0, 960, 960);
 
-  // Câmera seguindo o personagem
-  this.cameras.main.startFollow(player);
+  // Câmera seguindo o personagem 1
+  this.cameras.main.startFollow(player1);
 };
 
 cena1.update = function (time, delta) {
-  if (cursors.left.isDown) {
-    player.body.setVelocityX(-100);
-    player.anims.play("left", true);
-  } else if (cursors.right.isDown) {
-    player.body.setVelocityX(100);
-    player.anims.play("right", true);
+  // Controle do personagem 1: WASD
+  if (left.isDown) {
+    player1.body.setVelocityX(-100);
+    player1.anims.play("left1", true);
+  } else if (right.isDown) {
+    player1.body.setVelocityX(100);
+    player1.anims.play("right1", true);
   } else {
-    player.body.setVelocity(0);
-    player.anims.play("stopped", true);
+    player1.body.setVelocity(0);
+    player1.anims.play("stopped1", true);
+  }
+  if (up.isDown) {
+    player1.body.setVelocityY(-100);
+  } else if (down.isDown) {
+    player1.body.setVelocityY(100);
+  } else {
+    player1.body.setVelocityY(0);
   }
 
-  if (cursors.up.isDown) {
-    player.body.setVelocityY(-100);
-  } else if (cursors.down.isDown) {
-    player.body.setVelocityY(100);
+  // Controle do personagem 2: direcionais
+  if (cursors.left.isDown) {
+    player2.body.setVelocityX(-100);
+    player2.anims.play("left2", true);
+  } else if (cursors.right.isDown) {
+    player2.body.setVelocityX(100);
+    player2.anims.play("right2", true);
   } else {
-    player.body.setVelocityY(0);
+    player2.body.setVelocity(0);
+    player2.anims.play("stopped2", true);
+  }
+  if (cursors.up.isDown) {
+    player2.body.setVelocityY(-100);
+  } else if (cursors.down.isDown) {
+    player2.body.setVelocityY(100);
+  } else {
+    player2.body.setVelocityY(0);
   }
 };
 
