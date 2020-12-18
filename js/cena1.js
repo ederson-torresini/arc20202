@@ -10,7 +10,8 @@ var tileset0;
 var terreno;
 var tileset1;
 var ARCas;
-var player;
+var player1;
+var player2;
 var parede;
 var voz;
 var cursors;
@@ -23,7 +24,15 @@ cena1.preload = function () {
   this.load.image("terreno", "assets/terreno.png");
   this.load.image("ARCas", "assets/ARCas.png");
   this.load.tilemapTiledJSON("map", "assets/cena1.json");
-  this.load.spritesheet("player", "assets/player.png", {
+
+  // Jogador 1
+  this.load.spritesheet("player1", "assets/player1.png", {
+    frameWidth: 16,
+    frameHeight: 16,
+  });
+
+  // Jogador 2
+  this.load.spritesheet("player2", "assets/player2.png", {
     frameWidth: 16,
     frameHeight: 16,
   });
@@ -54,8 +63,9 @@ cena1.create = function () {
   // Terreno
   terreno = map.createStaticLayer("terreno", tileset0, 0, 0);
 
-  // Personagem
-  player = this.physics.add.sprite(400, 304, "player");
+  // Personagens
+  player1 = this.physics.add.sprite(400, 300, "player1");
+  player2 = this.physics.add.sprite(300, 400, "player2");
 
   // Prédios (ARCas)
   ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
