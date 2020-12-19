@@ -4,7 +4,7 @@
 
 A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/premissa.md) e as [definições](https://github.com/boidacarapreta/arc20202/blob/main/definições.md) do jogo dão uma ideia do jogo, mas o bom mesmo é jogar: [https://boidacarapreta.github.io/arc20202](https://boidacarapreta.github.io/arc20202).
 
-# Ferramentas para o desenvolvimento do projeto da disciplina
+## Ferramentas para o desenvolvimento do projeto da disciplina
 
 - [Phaser 3](https://phaser.io): _framework_ para desenvolvimento de jogos Web usando Javascript ou Typescript. Tem [boa documentação, de exemplos a tutoriais na página oficial](https://phaser.io/learn).
 - [Gitpod](https://www.gitpod.io/): IDE _online_. Documentação de apoio: [Gitpodifying — The Ultimate Guide
@@ -19,20 +19,20 @@ A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/premissa.md) e
 - [ZzXFM](https://keithclark.co.uk/articles/zzfxm/): mini gerador de música para Javascript.
 - [Buildbox](https://www.buildbox.com/13-places-to-find-free-game-sound-effects/): coletânea de sites com efeitos sonoros grátis.
 
-# Sites com recursos
+## Sites com recursos
 
 - [GameDev Academy](https://gamedevacademy.org/): tutoriais para desenvolvimento de jogos Web, como por exemplo [jogos multijogador com Socket.IO](https://gamedevacademy.org/create-a-basic-multiplayer-game-in-phaser-3-with-socket-io-part-1/) e [MMORPGs](https://phasertutorials.com/how-to-create-a-phaser-3-mmorpg-part-1/).
 - [OpenGameArt.org](https://opengameart.org/): _assets_ para sprites, músicas etc.
 - [Emanuele Feronato](https://www.emanueleferonato.com/): dicas de desenvolvimento de jogos Web, como por exemplo [mapas procedurais](https://www.emanueleferonato.com/2019/01/29/javascript-procedural-dungeon-generator-found-on-github-fixed-a-bit-and-about-to-be-expanded/).
 - [Michael Hadley](https://medium.com/@michaelwesthadley): tutorial de como [criar mundos modulares usando _tilemaps_](https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6).
 
-# Para jogar e experimentar
+## Para jogar e experimentar
 
 - [Itchio: Top Games made with Phaser](https://itch.io/games/made-with-phaser): coletânea de jogos feitos com Phaser 3 na plataforma de jogos _indie_.
 - [ChooseYourStory.com](https://chooseyourstory.com/): jogos baseados em texto.
 - [Game with Remote Controlled Robots over Internet](https://www.kickstarter.com/projects/remotegames/game-with-remote-controlled-robots-over-internet): controle remoto de robôs na maquete da cidade de Prypiat.
 
-# Equipes
+## Equipes
 
 | Equipe                                                    | Projeto                                                                                    | Entrega 1 | Entrega 2 |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------- | --------- |
