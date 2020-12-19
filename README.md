@@ -1,8 +1,8 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/boiada-da-cara-preta/jogo-web)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/boidacarapreta/arc20202)
 
 # ARCa 20202
 
-A [premissa](https://github.com/boiada-da-cara-preta/jogo-web/blob/main/premissa.md) e as [definições](https://github.com/boiada-da-cara-preta/jogo-web/blob/main/definições.md) do jogo dão uma ideia do jogo, mas o bom mesmo é jogar: [https://boiada-da-cara-preta.github.io/jogo-web](https://boiada-da-cara-preta.github.io/jogo-web).
+A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/premissa.md) e as [definições](https://github.com/boidacarapreta/arc20202/blob/main/definições.md) do jogo dão uma ideia do jogo, mas o bom mesmo é jogar: [https://boidacarapreta.github.io/arc20202](https://boidacarapreta.github.io/arc20202).
 
 # Ferramentas para o desenvolvimento do projeto da disciplina
 
