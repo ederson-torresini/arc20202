@@ -22,6 +22,8 @@ var cursors;
 var timedEvent;
 var timer;
 var timerText;
+var life = 0;
+var lifeText;
 var trilha;
 
 cena1.preload = function () {
@@ -182,10 +184,17 @@ cena1.create = function () {
     loop: true,
   });
 
+  // Mostra há quanto tempo estão jogando (a vida dos jogadores)
+  lifeText = this.add.text(20, 24, life, {
+    fontSize: "32px",
+    fill: "#cccccc",
+  });
+  lifeText.setScrollFactor(0);
+
   // Mostra na tela o contador
   timerText = this.add.text(16, 16, timer, {
     fontSize: "32px",
-    fill: "#000",
+    fill: "#000000",
   });
   timerText.setScrollFactor(0);
 
@@ -286,6 +295,10 @@ function hitARCa(player, ARCas) {
 }
 
 function countdown() {
+  // Adiciona o tempo de vida em 1 segundo
+  life += 1;
+  lifeText.setText(life);
+
   // Reduz o contador em 1 segundo
   timer -= 1;
   timerText.setText(timer);
