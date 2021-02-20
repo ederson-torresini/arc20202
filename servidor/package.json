@@ -1,21 +1,11 @@
 {
   "name": "arc20202",
   "version": "0.1.0",
-  "description": "Jogo Web com Phaser3 e Node.js",
   "main": "servidor.js",
   "scripts": {
+    "postinstall": "npm install",
     "start": "node servidor.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/boidacarapreta/arc20202.git"
-  },
-  "author": "Ederson Torrresini <ederson@boidacarapreta.cc>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/boidacarapreta/arc20202/issues"
-  },
-  "homepage": "https://github.com/boidacarapreta/arc20202#readme",
   "dependencies": {
     "express": "^4.17.1"
   },
