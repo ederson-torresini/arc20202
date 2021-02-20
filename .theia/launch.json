@@ -6,7 +6,7 @@
       "request": "launch",
       "name": "Rodar servidor",
       "cwd": "${workspaceFolder}/servidor",
-      "program": "servidor.js"
+      "program": "${workspaceFolder}/servidor/servidor.js"
     }
   ]
 }
