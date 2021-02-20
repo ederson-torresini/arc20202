@@ -2,6 +2,5 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-"workbench.iconTheme": "theia-file-icons",
-"editor.autoSave": "on"
+  "editor.autoSave": "on"
 }
