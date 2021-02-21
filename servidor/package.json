@@ -1,15 +1,32 @@
 {
-  "name": "arc20202",
-  "version": "0.1.0",
-  "main": "servidor.js",
-  "scripts": {
-    "postinstall": "npm install",
-    "start": "node servidor.js"
+  "author": "Ederson Torresini <ederson@boidacarapreta.cc>",
+  "bugs": {
+    "url": "https://github.com/boidacarapreta/arc20202/issues"
   },
   "dependencies": {
     "express": "^4.17.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+  "description": "Servidor de jogo Web multijogador",
+  "engines": {
+    "node": "14.x"
+  },
+  "homepage": "https://github.com/boidacarapreta/arc20202#readme",
+  "keywords": [
+    "game",
+    "node",
+    "phaser",
+    "web"
+  ],
+  "license": "MIT",
+  "main": "servidor.js",
+  "name": "arc20202-servidor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boidacarapreta/arc20202.git"
+  },
+  "scripts": {
+    "start": "node servidor.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.0"
 }
