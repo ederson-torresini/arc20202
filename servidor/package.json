@@ -4,11 +4,12 @@
     "url": "https://github.com/boidacarapreta/arc20202/issues"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^3.1.2"
   },
   "description": "Servidor de jogo Web multijogador",
   "engines": {
-    "node": "14.x"
+    "node": ">=14.x"
   },
   "homepage": "https://github.com/boidacarapreta/arc20202#readme",
   "keywords": [
