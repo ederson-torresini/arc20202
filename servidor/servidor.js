@@ -3,17 +3,38 @@ const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 const PORT = process.env.PORT || 3000;
+var jogadores = {
+  primeiro: undefined,
+  segundo: undefined,
+};
 
 // Disparar evento quando jogador entrar na partida
 io.on("connection", function (socket) {
-  socket.broadcast.emit("jogadorEntrou", socket.id);
-  console.log("Jogador %s entrou na partida", socket.id);
+  if (jogadores.primeiro === undefined) {
+    jogadores.primeiro = socket.id;
+  } else if (
+    jogadores.segundo === undefined
+  ) {
+    jogadores.segundo = socket.id;
+  }
+  io.emit("jogadores", jogadores);
+  console.log("+Lista de jogadores: %s", jogadores);
 
   // Disparar evento quando jogador sair da partida
   socket.on("disconnect", function () {
-    io.emit("jogadorSaiu", socket.id);
-    console.log("Usuário %s saiu da partida", socket.id);
+    if (jogadores.primeiro === socket.id) {
+      jogadores.primeiro = undefined;
+    }
+    if (jogadores.segundo === socket.id) {
+      jogadores.segundo = undefined;
+    }
+    io.emit("jogadores", jogadores);
+    console.log("-Lista de jogadores: %s", jogadores);
   });
+
+  socket.on("estadoDoJogador", function (estado) {
+    socket.broadcast.emit("desenharOutroJogador", estado)
+   })
 });
 
 app.use(express.static("../cliente"));
