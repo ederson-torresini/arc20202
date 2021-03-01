@@ -12,10 +12,6 @@ var tileset1;
 var ARCas;
 var player1;
 var player2;
-var up;
-var down;
-var left;
-var right;
 var parede;
 var voz;
 var cursors;
@@ -25,6 +21,7 @@ var timerText;
 var life = 0;
 var lifeText;
 var trilha;
+var jogador;
 
 cena1.preload = function () {
   // Tilesets
@@ -61,9 +58,6 @@ cena1.preload = function () {
 };
 
 cena1.create = function () {
-  // Iniciando contagem regressiva...
-  timer = 60;
-
   // Trilha sonora
   trilha = this.sound.add("trilha");
   trilha.play();
@@ -81,27 +75,11 @@ cena1.create = function () {
 
   // Camada 1: terreno
   terreno = map.createStaticLayer("terreno", tileset0, 0, 0);
+  terreno.setCollisionByProperty({ collides: true });
 
   // Personagens
   player1 = this.physics.add.sprite(400, 300, "player1");
   player2 = this.physics.add.sprite(300, 400, "player2");
-
-  // Camada 2: ARCas
-  ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
-
-  // Personagens colidem com os limites da cena
-  player1.setCollideWorldBounds(true);
-  player2.setCollideWorldBounds(true);
-
-  // Detecção de colisão: terreno
-  terreno.setCollisionByProperty({ collides: true });
-  this.physics.add.collider(player1, terreno, hitCave, null, this);
-  this.physics.add.collider(player2, terreno, hitCave, null, this);
-
-  // Detecção de colisão e disparo de evento: ARCas
-  ARCas.setCollisionByProperty({ collides: true });
-  this.physics.add.collider(player1, ARCas, hitARCa, null, this);
-  this.physics.add.collider(player2, ARCas, hitARCa, null, this);
 
   // Animação do jogador 1: a esquerda
   this.anims.create({
@@ -169,20 +147,12 @@ cena1.create = function () {
     repeat: -1,
   });
 
+  // Camada 2: ARCas
+  ARCas = map.createStaticLayer("ARCas", tileset1, 0, 0);
+  ARCas.setCollisionByProperty({ collides: true });
+
   // Direcionais do teclado
   cursors = this.input.keyboard.createCursorKeys();
-  up = this.input.keyboard.addKey("W");
-  down = this.input.keyboard.addKey("S");
-  left = this.input.keyboard.addKey("A");
-  right = this.input.keyboard.addKey("D");
-
-  // Contagem regressiva em segundos (1.000 milissegundos)
-  timedEvent = this.time.addEvent({
-    delay: 1000,
-    callback: countdown,
-    callbackScope: this,
-    loop: true,
-  });
 
   // Mostra há quanto tempo estão jogando (a vida dos jogadores)
   lifeText = this.add.text(20, 24, life, {
@@ -201,9 +171,6 @@ cena1.create = function () {
   // Cena (960x960) maior que a tela (800x600)
   this.cameras.main.setBounds(0, 0, 960, 960);
   this.physics.world.setBounds(0, 0, 960, 960);
-
-  // Câmera seguindo o personagem 1
-  this.cameras.main.startFollow(player1);
 
   // Botão de ativar/desativar tela cheia
   var button = this.add
@@ -242,45 +209,125 @@ cena1.create = function () {
     },
     this
   );
+
+  // Conectar no servidor via WebSocket
+  this.socket = io();
+
+  // Disparar evento quando jogador entrar na partida
+  var self = this;
+  var physics = this.physics;
+  var cameras = this.cameras;
+  var time = this.time;
+
+  this.socket.on("jogadores", function (jogadores) {
+    if (jogadores.primeiro === self.socket.id) {
+      // Define jogador como o primeiro
+      jogador = 1;
+
+      // Personagens colidem com os limites da cena
+      player1.setCollideWorldBounds(true);
+
+      // Detecção de colisão: terreno
+      physics.add.collider(player1, terreno, hitCave, null, this);
+
+      // Detecção de colisão e disparo de evento: ARCas
+      physics.add.collider(player1, ARCas, hitARCa, null, this);
+
+      // Câmera seguindo o personagem 1
+      cameras.main.startFollow(player1);
+    } else if (jogadores.segundo === self.socket.id) {
+      // Define jogador como o segundo
+      jogador = 2;
+
+      // Personagens colidem com os limites da cena
+      player2.setCollideWorldBounds(true);
+
+      // Detecção de colisão: terreno
+      physics.add.collider(player2, terreno, hitCave, null, this);
+
+      // Detecção de colisão e disparo de evento: ARCas
+      physics.add.collider(player2, ARCas, hitARCa, null, this);
+
+      // Câmera seguindo o personagem 2
+      cameras.main.startFollow(player2);
+    }
+
+    // Os dois jogadores estão conectados
+    console.log(jogadores)
+    if (jogadores.primeiro !== undefined && jogadores.segundo !== undefined) {
+      // Contagem regressiva em segundos (1.000 milissegundos)
+      timer = 60;
+      timedEvent = time.addEvent({
+        delay: 1000,
+        callback: countdown,
+        callbackScope: this,
+        loop: true,
+      });
+    }
+  });
+
+  // Desenhar o outro jogador
+  this.socket.on("desenharOutroJogador", ({ frame, x, y }) => {
+    if (jogador === 1) {
+      player2.setFrame(frame);
+      player2.x = x;
+      player2.y = y;
+    } else if (jogador === 2) {
+      player1.setFrame(frame);
+      player1.x = x;
+      player1.y = y;
+    }
+  });
 };
 
 cena1.update = function (time, delta) {
-  // Controle do personagem 1: WASD
-  if (left.isDown) {
-    player1.body.setVelocityX(-100);
-    player1.anims.play("left1", true);
-  } else if (right.isDown) {
-    player1.body.setVelocityX(100);
-    player1.anims.play("right1", true);
-  } else {
-    player1.body.setVelocity(0);
-    player1.anims.play("stopped1", true);
-  }
-  if (up.isDown) {
-    player1.body.setVelocityY(-100);
-  } else if (down.isDown) {
-    player1.body.setVelocityY(100);
-  } else {
-    player1.body.setVelocityY(0);
-  }
-
-  // Controle do personagem 2: direcionais
-  if (cursors.left.isDown) {
-    player2.body.setVelocityX(-100);
-    player2.anims.play("left2", true);
-  } else if (cursors.right.isDown) {
-    player2.body.setVelocityX(100);
-    player2.anims.play("right2", true);
-  } else {
-    player2.body.setVelocity(0);
-    player2.anims.play("stopped2", true);
-  }
-  if (cursors.up.isDown) {
-    player2.body.setVelocityY(-100);
-  } else if (cursors.down.isDown) {
-    player2.body.setVelocityY(100);
-  } else {
-    player2.body.setVelocityY(0);
+  // Controle do personagem por direcionais
+  if (jogador === 1 && timer >= 0) {
+    if (cursors.left.isDown) {
+      player1.body.setVelocityX(-100);
+      player1.anims.play("left1", true);
+    } else if (cursors.right.isDown) {
+      player1.body.setVelocityX(100);
+      player1.anims.play("right1", true);
+    } else {
+      player1.body.setVelocity(0);
+      player1.anims.play("stopped1", true);
+    }
+    if (cursors.up.isDown) {
+      player1.body.setVelocityY(-100);
+    } else if (cursors.down.isDown) {
+      player1.body.setVelocityY(100);
+    } else {
+      player1.body.setVelocityY(0);
+    }
+    this.socket.emit("estadoDoJogador", {
+      frame: player1.anims.currentFrame.index,
+      x: player1.body.x,
+      y: player1.body.y,
+    });
+  } else if (jogador === 2 && timer >= 0) {
+    if (cursors.left.isDown) {
+      player2.body.setVelocityX(-100);
+      player2.anims.play("left2", true);
+    } else if (cursors.right.isDown) {
+      player2.body.setVelocityX(100);
+      player2.anims.play("right2", true);
+    } else {
+      player2.body.setVelocity(0);
+      player2.anims.play("stopped2", true);
+    }
+    if (cursors.up.isDown) {
+      player2.body.setVelocityY(-100);
+    } else if (cursors.down.isDown) {
+      player2.body.setVelocityY(100);
+    } else {
+      player2.body.setVelocityY(0);
+    }
+    this.socket.emit("estadoDoJogador", {
+      frame: player2.anims.currentFrame.index,
+      x: player2.body.x,
+      y: player2.body.y,
+    });
   }
 };
 
