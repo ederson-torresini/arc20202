@@ -45,3 +45,4 @@ A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/docs/premissa.
 | [MK-VVSM](https://github.com/MK-VVSM)                     | [kanban](https://github.com/MK-VVSM/jogo/projects/1)                                       | 6         | 0         | 0         |
 | [Erklan](https://github.com/Erklan)                       | [kanban](https://github.com/Erklan/jogo-web/projects/1)                                    | 6         | 7         | 6         |
 | [TiO-Games](https://github.com/TiO-Games)                 | [Kanban do Jogo Web](https://github.com/TiO-Games/jogo_web/projects/1)                     | 3         | 0         | 0         |
+| [LMV-Jogos](https://github.com/LMV-Jogos)                 | [kanban](https://github.com/LMV-Jogos/Jogo/projects/1)                                     | 8         | 0         | 0         |
