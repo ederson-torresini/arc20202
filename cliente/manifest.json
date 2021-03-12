@@ -1,0 +1,30 @@
+{
+  "name": "ARCa 20202",
+  "short_name": "arc20202",
+  "lang": "pt-BR",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/logo-128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "assets/logo-192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/logo-256.png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "assets/logo-384.png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "assets/logo-512.png",
+      "sizes": "512x512"
+    }
+  ]
+}

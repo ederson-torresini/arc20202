@@ -3,7 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <title>ARCa 20202</title>
+    <meta name="author" content="Ederson Torresini" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="ARCa 20202" />
+    <meta name="apple-mobile-web-app-title" content="ARCa 20202" />
+    <meta name="msapplication-starturl" content="./index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" sizes="128x128" href="./assets/logo-128.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="./assets/logo-128.png" />
+    <link rel="icon" sizes="192x192" href="./assets/logo-192.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="./assets/logo-192.png" />
+    <link rel="icon" sizes="256x256" href="./assets/logo-256.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="./assets/logo-256.png" />
+    <link rel="icon" sizes="384x384" href="./assets/logo-384.png" />
+    <link rel="apple-touch-icon" sizes="384x384" href="./assets/logo-384.png" />
+    <link rel="icon" sizes="512x512" href="./assets/logo-512.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="./assets/logo-512.png" />
     <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.info("Service worker registered: ", reg))
+          .catch((err) =>
+            console.error("Error registering service worker: ", err)
+          );
+      }
+    </script>
   </head>
   <body>
     <div class="center" id="game-container"></div>
