@@ -34,13 +34,13 @@ A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/docs/premissa.
 
 ## Equipes
 
-| Equipe                                                    | Projeto                                                                                    | Entrega 1 | Entrega 2 | Entrega 3 |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------- | --------- | --------- |
-| [mirabolante](https://github.com/mirabolante)             | [kanban](https://github.com/mirabolante/jogo-web/projects/1)                               | 10        | 10        | 10        |
-| [falarya-brawl](https://github.com/falarya-brawl)         | [Falarya-game-project](https://github.com/falarya-brawl/falarya-game/projects/1)           | 8         | 0         | 0         |
-| [FBJ-TCD](https://github.com/FBJ-TCD)                     | [O LABIRINTO DAS ESCOLHAS](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS/projects/1) | 10        | 10        | 10        |
-| [FT-riddle](https://github.com/FT-riddle)                 | [kanban](https://github.com/FT-riddle/jogo-web/projects/1)                                 | 8         | 0         | 0         |
-| [G-A-L-E-O-N-G-A-D](https://github.com/G-A-L-E-O-N-G-A-D) | [Project X](https://github.com/G-A-L-E-O-N-G-A-D/PROJECT-X/projects/1)                     | 10        | 3         | 0         |
-| [mba-studios](https://github.com/mba-studios)             | [Jogo](https://github.com/mba-studios/mba-studios/projects/2)                              | 10        | 10        | 10        |
-| [TiO-Games](https://github.com/TiO-Games)                 | [Kanban do Jogo Web](https://github.com/TiO-Games/jogo_web/projects/1)                     | 3         | 0         | 0         |
-| [LMV-Jogos](https://github.com/LMV-Jogos)                 | [kanban](https://github.com/LMV-Jogos/Jogo/projects/1)                                     | 10        | 0         | 0         |
+| Equipe                                            | Projeto                                                                                    | Entrega 1 | Entrega 2 | Entrega 3 |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------- | --------- | --------- |
+| [mirabolante](https://github.com/mirabolante)     | [kanban](https://github.com/mirabolante/jogo-web/projects/1)                               | 10        | 10        | 10        |
+| [falarya-brawl](https://github.com/falarya-brawl) | [Falarya-game-project](https://github.com/falarya-brawl/falarya-game/projects/1)           | 8         | 0         | 0         |
+| [FBJ-TCD](https://github.com/FBJ-TCD)             | [O LABIRINTO DAS ESCOLHAS](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS/projects/1) | 10        | 10        | 10        |
+| [FT-riddle](https://github.com/FT-riddle)         | [kanban](https://github.com/FT-riddle/jogo-web/projects/1)                                 | 8         | 0         | 0         |
+| [Nidhoogr](https://github.com/Nidhoogr)           | [kanban](https://github.com/Nidhoogr/Yggdrasil/projects/2)                                 |           |           |           |
+| [mba-studios](https://github.com/mba-studios)     | [Jogo](https://github.com/mba-studios/mba-studios/projects/2)                              | 10        | 10        | 10        |
+| [TiO-Games](https://github.com/TiO-Games)         | [Kanban do Jogo Web](https://github.com/TiO-Games/jogo_web/projects/1)                     | 3         | 0         | 0         |
+| [LMV-Jogos](https://github.com/LMV-Jogos)         | [kanban](https://github.com/LMV-Jogos/Jogo/projects/1)                                     | 10        | 0         | 0         |
