@@ -12,13 +12,26 @@ var jogadores = {
 io.on("connection", function (socket) {
   if (jogadores.primeiro === undefined) {
     jogadores.primeiro = socket.id;
-  } else if (
-    jogadores.segundo === undefined
-  ) {
+  } else if (jogadores.segundo === undefined) {
     jogadores.segundo = socket.id;
   }
   io.emit("jogadores", jogadores);
   console.log("+Lista de jogadores: %s", jogadores);
+
+  // Sinalização de áudio: oferta
+  socket.on("offer", (socketId, description) => {
+    socket.to(socketId).emit("offer", socket.id, description);
+  });
+
+  // Sinalização de áudio: atendimento da oferta
+  socket.on("answer", (socketId, description) => {
+    socket.to(socketId).emit("answer", description);
+  });
+
+  // Sinalização de áudio: envio dos candidatos de caminho
+  socket.on("candidate", (socketId, signal) => {
+    socket.to(socketId).emit("candidate", signal);
+  });
 
   // Disparar evento quando jogador sair da partida
   socket.on("disconnect", function () {
@@ -33,8 +46,8 @@ io.on("connection", function (socket) {
   });
 
   socket.on("estadoDoJogador", function (estado) {
-    socket.broadcast.emit("desenharOutroJogador", estado)
-   })
+    socket.broadcast.emit("desenharOutroJogador", estado);
+  });
 });
 
 app.use(express.static("../cliente"));
