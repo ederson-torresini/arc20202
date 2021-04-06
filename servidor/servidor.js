@@ -50,5 +50,13 @@ io.on("connection", function (socket) {
   });
 });
 
-app.use(express.static("../cliente"));
+// Dois tipos de cliente: com Phaser 3 e com Twine
+app.use("/phaser3/", express.static("../cliente-phaser3"));
+app.use("/twine/", express.static("../cliente-twine"));
+
+// O cliente feito em Phaser 3 é o padrão
+app.use("/", (req, res) => {
+  res.redirect("/phaser3");
+});
+
 server.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
