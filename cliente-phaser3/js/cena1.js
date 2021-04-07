@@ -23,7 +23,7 @@ var lifeText;
 var trilha;
 var jogador;
 var ice_servers = {
-  iceServers: [{ url: "stun:stun.l.google.com:19302" }],
+  iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
 var localConnection;
 var remoteConnection;

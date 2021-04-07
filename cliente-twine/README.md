@@ -8,7 +8,7 @@ Durante a produção da história, deve-se adicionar o seguinte código no Javas
 
 ```js
 var ice_servers = {
-  iceServers: [{ url: "stun:stun.l.google.com:19302" }],
+  iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
 var localConnection;
 var remoteConnection;
