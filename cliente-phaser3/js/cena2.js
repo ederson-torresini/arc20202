@@ -6,7 +6,7 @@ var cena2 = new Phaser.Scene("Cena 2");
 
 cena2.preload = function () {
   // Imagem de fundo
-  this.load.image("flor", "assets/cena2.png");
+  this.load.image("flor", "./assets/cena2.png");
 };
 
 cena2.create = function () {
