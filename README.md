@@ -36,9 +36,9 @@ A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/docs/premissa.
 
 - [Julia de Souza Silveira e Sabrina Garcia Alves Veiga Villela](https://github.com/boidacarapreta/arc20202-mirabolante-jogo-web) ([original](https://github.com/mirabolante/jogo-web))
 - Paulo Bruno Bertotti Corá e Gabrielly Cristina de Sousa
-- [Faber Bernardo Júnior e Tiago Correa Damiani](https://github.com/boidacarapreta/arc20202-FBJ-TCD-O-LABIRINTO-DAS-ESCOLHAS) ([original](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS))
+- [Faber Bernardo Júnior, Tiago Correa Damiani, Yasmin Alves Ludgerio e Larissa Moraes Correa](https://github.com/boidacarapreta/arc20202-FBJ-TCD-O-LABIRINTO-DAS-ESCOLHAS) ([original](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS))
 - [Francine Regis Duarte e Thiago Paim Alflen](https://github.com/boidacarapreta/arc20202-FT-riddle-jogo-web) ([original](https://github.com/FT-riddle/jogo-web))
 - [Gabriel Luiz Espindola Pedro e Leonardo de Oliveira Dias](https://github.com/boidacarapreta/arc20202-Nidhoogr-Yggdrasil) ([original](https://github.com/Nidhoogr/Yggdrasil))
-- [ Arthur Cadore Matuella Barcella, Bruna Silveira e Matheus Pires Salazar](https://github.com/boidacarapreta/arc20202-mba-studios-mba-studios) ([original](https://github.com/mba-studios/mba-studios))
+- [Arthur Cadore Matuella Barcella, Bruna Silveira e Matheus Pires Salazar](https://github.com/boidacarapreta/arc20202-mba-studios-mba-studios) ([original](https://github.com/mba-studios/mba-studios))
 - [Iohan Monquelate Arndt dos Reis e Tiago Vieira Ramos](https://github.com/boidacarapreta/arc20202-TiO-Games-jogo_web) ([original](https://github.com/TiO-Games/jogo_web))
 - [Laura Alaide Macedo, Mariana Korb e Viviane Valentina Stupp Martins](https://github.com/boidacarapreta/arc20202-LMV-Jogos-Jogo) ([original](https://github.com/LMV-Jogos/Jogo))
