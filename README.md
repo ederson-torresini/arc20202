@@ -34,13 +34,11 @@ A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/docs/premissa.
 
 ## Equipes
 
-| Equipe                                            | Projeto                                                                                    | Entrega 1 | Entrega 2 | Entrega 3 | Entrega 4 | Entrega 5 | Entrega 6 | Entrega 7 | Entrega 8 |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
-| [mirabolante](https://github.com/mirabolante)     | [kanban](https://github.com/mirabolante/jogo-web/projects/1)                               | 10        | 10        | 10        | 10        | 10        | 10        | 10        | 10        |
-| [falarya-brawl](https://github.com/falarya-brawl) | [Falarya-game-project](https://github.com/falarya-brawl/falarya-game/projects/1)           | 10        | 10        | 10        | 10        | 10        | 10        | 10        | 10        |
-| [FBJ-TCD](https://github.com/FBJ-TCD)             | [O LABIRINTO DAS ESCOLHAS](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS/projects/1) | 10        | 10        | 10        | 10        | 10        | 10        | 10        | 10        |
-| [FT-riddle](https://github.com/FT-riddle)         | [kanban](https://github.com/FT-riddle/jogo-web/projects/1)                                 | 8         | 9         | 10        | 10        | 10        | 10        | 8         | 5         |
-| [Nidhoogr](https://github.com/Nidhoogr)           | [kanban](https://github.com/Nidhoogr/Yggdrasil/projects/2)                                 | 10        | 10        | 4         | 8         | 4         | 5         | 4         | 5         |
-| [mba-studios](https://github.com/mba-studios)     | [Jogo](https://github.com/mba-studios/mba-studios/projects/2)                              | 10        | 10        | 10        | 10        | 10        | 10        | 10        | 10        |
-| [TiO-Games](https://github.com/TiO-Games)         | [Kanban do Jogo Web](https://github.com/TiO-Games/jogo_web/projects/1)                     | 10        | 10        | 10        | 10        | 10        | 10        | 10        | 8         |
-| [LMV-Jogos](https://github.com/LMV-Jogos)         | [kanban](https://github.com/LMV-Jogos/Jogo/projects/1)                                     | 10        | 10        | 10        | 10        | 10        | 10        | 10        | 10        |
+- [Julia de Souza Silveira e Sabrina Garcia Alves Veiga Villela](https://github.com/boidacarapreta/arc20202-mirabolante-jogo-web) ([original](https://github.com/mirabolante/jogo-web))
+- Paulo Bruno Bertotti Corá e Gabrielly Cristina de Sousa
+- [Faber Bernardo Júnior e Tiago Correa Damiani](https://github.com/boidacarapreta/arc20202-FBJ-TCD-O-LABIRINTO-DAS-ESCOLHAS) ([original](https://github.com/FBJ-TCD/O-LABIRINTO-DAS-ESCOLHAS))
+- [Francine Regis Duarte e Thiago Paim Alflen](https://github.com/boidacarapreta/arc20202-FT-riddle-jogo-web) ([original](https://github.com/FT-riddle/jogo-web))
+- [Gabriel Luiz Espindola Pedro e Leonardo de Oliveira Dias](https://github.com/boidacarapreta/arc20202-Nidhoogr-Yggdrasil) ([original](https://github.com/Nidhoogr/Yggdrasil))
+- [ Arthur Cadore Matuella Barcella, Bruna Silveira e Matheus Pires Salazar](https://github.com/boidacarapreta/arc20202-mba-studios-mba-studios) ([original](https://github.com/mba-studios/mba-studios))
+- [Iohan Monquelate Arndt dos Reis e Tiago Vieira Ramos](https://github.com/boidacarapreta/arc20202-TiO-Games-jogo_web) ([original](https://github.com/TiO-Games/jogo_web))
+- [Laura Alaide Macedo, Mariana Korb e Viviane Valentina Stupp Martins](https://github.com/boidacarapreta/arc20202-LMV-Jogos-Jogo) ([original](https://github.com/LMV-Jogos/Jogo))
