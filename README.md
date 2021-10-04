@@ -2,7 +2,7 @@
 
 # ARCa 20202
 
-A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/docs/premissa.md) e as [definições](https://github.com/boidacarapreta/arc20202/blob/main/docs/definições.md) do jogo dão uma ideia do jogo, mas o bom mesmo é jogar: [https://arc20202.boidacarapreta.cc](https://arc20202.boidacarapreta.cc).
+A [premissa](https://github.com/boidacarapreta/arc20202/blob/main/docs/premissa.md) e as [definições](https://github.com/boidacarapreta/arc20202/blob/main/docs/definições.md) do jogo dão uma ideia do jogo, mas o bom mesmo é jogar: [https://arc20202.boidacarapreta.cc](https://boidacarapreta.github.io/arc20202).
 
 ## Ferramentas para o desenvolvimento do projeto da disciplina
 
